@@ -1,13 +1,40 @@
-
-import './App.css'
-
+import "./App.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import AppLayout from "./layout/app-layout";
+import LandingPage from "./pages/landing";
+import Auth from "./pages/auth";
+import Dashboard from "./pages/dashboard";
+import LinkPage from "./pages/link.jsx";
+import RedirectLink from "./pages/redirect-link";
 function App() {
-
-  return (
-    <div className='bg-green-900'>
-    h1
-    </div>
-  )
+  const router = createBrowserRouter([
+    {
+      element: <AppLayout />,
+      children: [
+        {
+          path: "/",
+          element: <LandingPage />,
+        },
+        {
+          path: "/auth",
+          element: <Auth />,
+        },
+        {
+          path: "/dashboard",
+          element: <Dashboard />,
+        },
+        {
+          path: "/link/:id",
+          element: <LinkPage />,
+        },
+        {
+          path: "/:id",
+          element: <RedirectLink />,
+        },
+      ],
+    },
+  ]);
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
