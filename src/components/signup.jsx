@@ -119,6 +119,7 @@ const Signup = () => {
             name="profile_pic"
             type="file"
             accept="image/*"
+            placeholder="Upload Profile Picture"
             onChange={handleInputChange}
           />
         </div>
