@@ -54,7 +54,7 @@ const LinkCard = ({url = [], fetchUrls}) => {
         <Button
           variant="ghost"
           onClick={() =>
-            navigator.clipboard.writeText(`https://shortly.in/${url?.short_url}`)
+            navigator.clipboard.writeText(`https://short-ly-lac.vercel.app/${url?.short_url}`)
           }
         >
           <Copy />
