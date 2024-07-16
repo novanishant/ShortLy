@@ -112,6 +112,7 @@ const Signup = () => {
             placeholder="Enter Password"
             onChange={handleInputChange}
           />
+          
         </div>
         {errors.password && <Error message={errors.password} />}
         <div className="space-y-1">
